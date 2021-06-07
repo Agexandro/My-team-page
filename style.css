@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding-top: 100px;
+    display: flex;
+    width: 850px;
+    margin: 0 auto;
+}
+
+.col {
+    width: 50%;
+}
+
+.row {
+    clear: both;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    width: 850px;
+}
+
+.column {
+    display: flex;
+}
+
+img {
+    width: 100%;
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.job {
+    writing-mode: sideways-rl;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.column:nth-child(3n+2) {
+    margin-top: 100px;
+}
+
+.title {
+    font-family: 'PT Serif', serif;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    width: 117px;
+    height: 27px;
+}
+
+.text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    width: 439px;
+    height: 87px;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+footer {
+    text-align: center;
+    padding:20px;
+    color: darkgray;
+}
+
+@media only screen and (max-width:900px) {
+    .row {
+        width: 90%;
+        grid-gap: 5%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .column:nth-child(odd) {
+        margin-top: 0px;
+    }
+
+    .column:nth-child(2n+2) {
+        margin-top: 60px;
+    }
+
+    .header {
+        display: block;
+        width: 90%;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .subtitle {
+        padding: 60px 0px 30px;
+    }
+
+    .header, .row, footer {
+        padding-top: 50px;
+    }
+}
+
+
+@media only screen and (max-width:400px) {
+    .title, .text {
+        width: 100%;
+        height: 100%;
+    }
+}
